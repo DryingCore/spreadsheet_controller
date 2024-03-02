@@ -23,7 +23,7 @@ const defaultColumnWidth = 15;
 worksheet["!cols"] = Array(7).fill({ width: defaultColumnWidth });
 
 // Salvar a planilha em um arquivo
-const outputFile = "";
+const outputFile = "teste.xlsx";
 XLSX.writeFile(workbook, outputFile, { bookSST: true });
 
 // Agora, você pode ler a planilha novamente se necessário
@@ -33,4 +33,4 @@ const jsonData = XLSX.utils.sheet_to_json(readSheet, { header: 1 });
 
 console.log(jsonData);
 
-module.exports = { worksheet };
+module.exports = { worksheet, outputFile };
