@@ -32,3 +32,5 @@ const readSheet = readWorkbook.Sheets[sheetName];
 const jsonData = XLSX.utils.sheet_to_json(readSheet, { header: 1 });
 
 console.log(jsonData);
+
+module.exports = { worksheet };
